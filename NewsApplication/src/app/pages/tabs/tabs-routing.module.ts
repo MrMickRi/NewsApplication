@@ -18,7 +18,7 @@ const routes: Routes = [
                 ]
             },
             {
-                path: 'buisness',
+                path: 'business',
                 children: [
                     {
                         path: '',
