@@ -9,20 +9,20 @@ import { ApiService } from '../../services/api.service';
     styleUrls: ['./business.page.scss'],
 })
 export class BusinessPage implements OnInit {
-    episodes: Observable<any>;
+    articles: Observable<any>;
 
     constructor(private router: Router, private api: ApiService) { }
 
     ngOnInit() {
-        this.episodes = this.api.getBusinessNews();
-        this.episodes.subscribe(data => {
+        this.articles = this.api.getBusinessNews();
+        this.articles.subscribe(data => {
             console.log('My Data: ', data);
         });
     }
 
-    openDetails(episode) {
-        let episodeID = episode.episode_id;
-        this.router.navigateByUrl('/tabs/business/${episodeI)');
+    openDetails(article) {
+        let articleID = article.articles_id;
+        this.router.navigateByUrl('/tabs/business/${articleID)');
     }
 
 }
