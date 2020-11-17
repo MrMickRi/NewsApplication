@@ -1,13 +1,14 @@
 <ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>Business</ion-title>
-  </ion-toolbar>
+	<ion-toolbar color="primary">
+		<ion-title>Business</ion-title>
+	</ion-toolbar>
 </ion-header>
 
 <ion-content>
- <ion-list>
-    <ion-item button detail lines="inset" *ngFor="let business of businesses | async">
-      {{business.webTitle}}
-    </ion-item>
-  </ion-list>
+	<ion-list>
+		<ion-item button detail lines="inset" *ngFor="episode of episodes | async">
+			{{ episode.title }}
+            {{ episode.episode_id}}
+		</ion-item>
+	</ion-list>
 </ion-content>

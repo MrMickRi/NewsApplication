@@ -10,7 +10,7 @@ export class ApiService {
     constructor(private http: HttpClient) { }
 
     getBusinessNews() {
-        return this.http.get('https://content.guardianapis.com/search?q=business&api-key=a007ac0a-881b-4ef1-8626-d6177f076104')
+        return this.http.get('https://www.breakingbadapi.com/api/episodes')
     }
     getArticle(id) {
         return this.http.get('https://content.guardianapis.com/${id}?api-key=a007ac0a-881b-4ef1-8626-d6177f076104')
