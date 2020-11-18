@@ -1,9 +1,17 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Finance</ion-title>
-  </ion-toolbar>
+	<ion-toolbar color="primary">
+		<ion-title>Finance</ion-title>
+	</ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-item text-wrap button *ngFor="let item of data" (click)="itemSelected(item)">
+    <ion-label >
+        <p>Name : {{ item.webTitle }}</p>
+        <p>Type : {{ item.type }}</p>
+        <p>Date : {{ item.webPublicationDate}}</p>
+    </ion-label>
+</ion-item>  
+
 
 </ion-content>
