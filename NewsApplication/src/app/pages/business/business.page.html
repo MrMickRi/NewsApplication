@@ -5,9 +5,9 @@
 </ion-header>
 
 <ion-content>
-	<ion-list>
-		<ion-item button detail lines="inset" *ngFor="article of articles | async">
-			{{index}}}
-		</ion-item>
-	</ion-list>
+  <ion-item button *ngFor="let item of data" (click)="itemSelected(item)">
+    <ion-label>{{ item.webTitle }}</ion-label>
+    <ion-label>{{ item.type }}</ion-label>
+</ion-item>  
+
 </ion-content>

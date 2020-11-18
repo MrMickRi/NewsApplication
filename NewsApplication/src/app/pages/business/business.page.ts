@@ -10,13 +10,15 @@ import { ApiService } from '../../services/api.service';
 })
 export class BusinessPage implements OnInit {
     articles: Observable<any>;
+    data: null
 
     constructor(private router: Router, private api: ApiService) { }
 
     ngOnInit() {
         this.articles = this.api.getBusinessNews();
         this.articles.subscribe(data => {
-            console.log('My Data: ', data);
+            this.data = data.response.results
+            console.log(data);
         });
     }
 
