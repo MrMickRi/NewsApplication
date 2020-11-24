@@ -5,9 +5,9 @@
 </ion-header>
 
 <ion-content>
-  <ion-item text-wrap button *ngFor="let item of data" (click)="itemSelected(item)">
+  <ion-item button detail lines="inset" text-wrap button *ngFor="let item of data" (click)="getArticle(articlesId)">
     <ion-label >
-        <p>Name : {{ item.webTitle }}</p>
+        <h2>Name : {{ item.webTitle }}</h2>
         <p>Type : {{ item.type }}</p>
         <p>Date : {{ item.webPublicationDate}}</p>
     </ion-label>

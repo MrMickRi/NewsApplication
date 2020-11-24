@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content>
-  <ion-item text-wrap button *ngFor="let item of data" (click)="itemSelected(item)">
+  <ion-item button detail lines="inset" text-wrap button *ngFor="let item of data" (click)="itemSelected(item)">
     <ion-label >
         <p>Name : {{ item.webTitle }}</p>
         <p>Type : {{ item.type }}</p>

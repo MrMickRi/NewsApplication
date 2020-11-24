@@ -14,25 +14,25 @@ export class FavouriteService {
   getAllFavouriteArticles(){
       return this.storage.get(STORAGE_KEY);
   }
-  isFavourite(artcileID){
+  isFavourite(articlesId){
     return this.getAllFavouriteArticles().then(result => {
-        return result && result.indexOf(artcileID) !== -1;
+        return result && result.indexOf(articlesId) !== -1;
     })
   }
-  favouriteArticle(artcileID){
+  favouriteArticle(articlesId){
       return this.getAllFavouriteArticles().then(result => {
           if(result){
-              result.push(artcileID);
+              result.push(articlesId);
               return this.storage.set(STORAGE_KEY, result);
           }else{
-              return this.storage.set(STORAGE_KEY, [artcileID])
+              return this.storage.set(STORAGE_KEY, [articlesId])
           }
       });
   }
-  unfavouriteArticle(artcileID){
+  unfavouriteArticle(articlesId){
       return this.getAllFavouriteArticles().then(result => {
           if(result){
-              var index = result.indexOf(artcileID);
+              var index = result.indexOf(articlesId);
               result.splice(index,1);
               return this.storage.set(STORAGE_KEY, result);
           }

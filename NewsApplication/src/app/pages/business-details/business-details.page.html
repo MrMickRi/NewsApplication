@@ -1,12 +1,18 @@
 <ion-header>
-  <ion-toolbar color="primary">
-    <ion-buttons slot="start">
-    <ion-back-button defaulthref="/tabs/Business"></ion-back-button>
-    </ion buttons>
-    <ion-title>Business Details</ion-title>
-  </ion-toolbar>
+<ion-toolbar color="primary">
+  <ion-buttons slot="start" defaultHref="/tabs/business">
+    <ion-back-button></ion-back-button>
+  </ion-buttons>
+  <ion-title>BiZDeets</ion-title>
+</ion-toolbar>
 </ion-header>
-
-<ion-content class="ion-padding">
-
+ 
+<ion-content>
+ 
+<ion-card *ngIf="film">
+  <ion-card-content>
+    {{ film.opening_crawl }}
+  </ion-card-content>
+</ion-card>
+ 
 </ion-content>

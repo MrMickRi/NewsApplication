@@ -1,9 +1,15 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Home</ion-title>
+    <ion-title>
+      Home
+    </ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
+  <div id="container">
+    <strong>Welcome to the CCT News App</strong>
+    <p>{{time | date:'mediumTime'}}</p>
+    <p>{{date | date:'longDate'}}</p>
+  </div>
 
 </ion-content>
